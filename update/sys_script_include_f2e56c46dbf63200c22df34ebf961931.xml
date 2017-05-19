@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_26324_pt.Utils</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Utils</name>
+        <script><![CDATA[var Utils = Class.create();
+Utils.prototype = {
+	initialize: function() {
+		this.ArrayUtil = new global.ArrayUtil();
+	},
+
+	getFields: function(table) {
+		
+		var tables = [table];
+		
+		var tableObject = new GlideRecord('sys_db_object');
+		tableObject.get('name', table);
+		var superClass = tableObject.super_class.name;
+		
+		while (superClass) {			
+			tables.push(superClass);
+			tableObject = new GlideRecord('sys_db_object');
+			tableObject.get('name', superClass);
+			superClass = tableObject.super_class.name;
+		}
+		
+		
+		var fields = {};
+		var invalidFields = gs.getProperty('x_26324_pt.invalid_fields').split(',');
+		
+		for (var i = 0; i < invalidFields.length; ++i) {
+			invalidFields[i] = String(invalidFields[i]).trim();
+		}
+		
+		for (var j = tables.length-1; j >= 0; --j) {
+						
+			var gr = new GlideRecord('sys_dictionary');
+			gr.addQuery('name', tables[j]);
+			gr.query();
+
+			while (gr.next()) {
+				
+				if (isValidField(gr.getValue('element'))) {
+					var element = gr.getValue('element');
+					var label = gr.getValue('column_label');
+					fields[element] = label;
+				}
+			}
+		}
+		
+		function isValidField(field) {
+			
+			field = String(field);
+			
+			var arrUtil = new global.ArrayUtil();
+			
+			if (arrUtil.contains(invalidFields, field)) {
+				return false;
+			}
+			
+			if (field.startsWith('sys_')) {
+				return false;
+			}
+			
+			return true;
+		}
+
+		return fields;
+	},
+
+	type: 'Utils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-19 07:04:50</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f2e56c46dbf63200c22df34ebf961931</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Utils</sys_name>
+        <sys_package display_value="Project Templates" source="x_26324_pt">b6f7d975db723200c22df34ebf96198c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Project Templates">b6f7d975db723200c22df34ebf96198c</sys_scope>
+        <sys_update_name>sys_script_include_f2e56c46dbf63200c22df34ebf961931</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-19 09:19:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

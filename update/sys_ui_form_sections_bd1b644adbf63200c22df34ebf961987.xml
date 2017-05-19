@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="bd1b644adbf63200c22df34ebf961987" sys_domain="global" table="x_26324_pt_transform_map_field" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-05-19 07:11:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f51b644adbf63200c22df34ebf96198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_26324_pt_transform_map_field" name="x_26324_pt_transform_map_field" sys_domain="global" view="Default view">bd1b644adbf63200c22df34ebf961987</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_26324_pt_transform_map_field" sys_domain="global" view="Default view">a0baa40adbf63200c22df34ebf96198c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-19 07:11:28</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-05-19 07:11:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f11b644adbf63200c22df34ebf96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_26324_pt_transform_map_field" name="x_26324_pt_transform_map_field" sys_domain="global" view="Default view">bd1b644adbf63200c22df34ebf961987</sys_ui_form>
+            <sys_ui_section caption="Advanced" display_value="Advanced" name="x_26324_pt_transform_map_field" sys_domain="global" view="Default view">711b644adbf63200c22df34ebf961987</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-19 07:11:28</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_26324_pt_transform_map_field</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-05-19 07:11:28</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd1b644adbf63200c22df34ebf961987</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_26324_pt_transform_map_field</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Project Templates" source="x_26324_pt">b6f7d975db723200c22df34ebf96198c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Project Templates">b6f7d975db723200c22df34ebf96198c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_bd1b644adbf63200c22df34ebf961987</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-19 07:11:28</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

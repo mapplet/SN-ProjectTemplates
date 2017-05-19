@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Transform Map Field" max_length="40" name="x_26324_pt_transform_map_field" type="collection">
+        <element default="function (source) {&#13;&#10;&#9;var answer = source.toString();&#13;&#10;&#9;return answer;&#13;&#10;}" label="Script" max_length="8000" name="script" type="script_plain"/>
+        <element label="Source" mandatory="true" max_length="40" name="source" type="string"/>
+        <element choice="3" label="Table" mandatory="true" max_length="40" name="table" type="string">
+            <choice>
+                <element label="Project" sequence="1" value="pm_project"/>
+                <element label="Project Task" sequence="2" value="pm_project_task"/>
+            </choice>
+        </element>
+        <element label="Target" mandatory="true" max_length="40" name="target" type="string"/>
+    </element>
+</database>
